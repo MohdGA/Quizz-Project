@@ -4,8 +4,8 @@ const questions = [
     question: "1.Which movie is Prince Charming from?",
     options: ["Shrek 2", "Frozen", "Cinderella", "Aladdin"],
     correct: "Shrek 2"
-  },
-  {
+  },{
+    
     question: "2.Which movie features a talking donkey?",
     options: ["Mulan", "Shrek", "Tangled", "Brave"],
     correct: "Shrek"
@@ -19,12 +19,19 @@ const questions = [
     question: "4.Who is the villain in The Lion King?",
     options: ["Scar", "Zazu", "Simba", "Rafiki"],
     correct: "Scar"
+  },
+  {
+    question: "5.In which animated movie is the song 'Let It Go' featured?",
+    options: ["Frozen", "Tangled", "Moana", "Brave"],
+    correct: "Frozen"
   }
+  
 ];
 
 /*---------- Variables (state) ---------*/
 let currentQuestionIndex = 0;
-let hasAnswered = false;
+let score = 0;
+let timer;
 
 /*----- Cached Element References  -----*/
 const questionH1 = document.querySelector("header h1");
@@ -37,40 +44,44 @@ const nextBtn = document.querySelector("#next");
 
 /*-------------- Functions -------------*/
 
-function render(){
-  const currentQ = questions[currentQuestionIndex];
-  questionH1.textContent = currentQ.question;
-  answer1.textContent = currentQ.options[0];
-  answer2.textContent = currentQ.options[1];
-  answer3.textContent = currentQ.options[2];
-  answer4.textContent = currentQ.options[3];
-  
-};
+function render() {
+  const current = questions[currentQuestionIndex];
+  questionH1.textContent = current.question;
+  answer1.textContent = current.options[0];
+  answer2.textContent = current.options[1];
+  answer3.textContent = current.options[2];
+  answer4.textContent = current.options[3];
+  correctP.textContent = "";
+  timer = set
+}
 
-function checkValue(event){
-  const userSelection = event.target.textContent;
-  const correctSelection = questions[currentQuestionIndex].correct;
+function checkValue(event) {
+  const selectedAnswer = event.target.textContent;
+  const correctAnswer = questions[currentQuestionIndex].correct;
 
-  console.log(userSelection)
-
-  if(userSelection === correctSelection){
-    correctP.textContent = "Correct Answer!";
-    currentQuestionIndex++;
-    // handleNext();
-  }else{
-    correctP.textContent = "Wrong Answer!";
-    render();
+  if (selectedAnswer === correctAnswer) {
+    event.target.classList.toggle("rightColor");
+    score += 1;
+  } else {
+    event.target.classList.toggle("wrongColor");
   }
 }
 
-
+function handleNext() {
+  currentQuestionIndex++;
+  if (currentQuestionIndex >= questions.length) {
+    //  nextBtn.innerHTML = "<a href='/html/landing.html'><";
+  }
+  render();
+}
 
 /*----------- Event Listeners ----------*/
 answer1.addEventListener('click', checkValue);
 answer2.addEventListener('click', checkValue);
 answer3.addEventListener('click', checkValue);
 answer4.addEventListener('click', checkValue);
-// nextBtn.addEventListener('click', handleNext);
+nextBtn.addEventListener('click', handleNext);
 
 /*---------- Initial Render ------------*/
 render();
+

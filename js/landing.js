@@ -7,15 +7,18 @@
 /*----- Cached Element References  -----*/
 const settingBtn = document.querySelector('#settingBtn');
 const settingDiv = document.querySelector("#settingDiv");
-console.log(settingDiv)
+const audio = new Audio("/music/music.mp3");
+
 
 
 /*-------------- Functions -------------*/
 
-// function selection(event){
-//   if(event.target.id === "settingBtn"){
-//     settingDiv.innerHTML = "";
-// }
-// }
+function handleMusic(event){
+  if(event.target.id){
+    audio.play();
+  }
+}
+
 /*----------- Event Listeners ----------*/
-// settingBtn.addEventListener('click', selection)
+settingDiv.addEventListener('click', handleMusic)
+
