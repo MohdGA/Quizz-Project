@@ -16,13 +16,13 @@ body{
   gap: 20px;
 }
 
-.children{
+.categories{
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 250px;
   background-color: #1ca081;
   border-radius: 5px;
   margin-top: 20px;
@@ -37,19 +37,19 @@ h1{
 
 .name{
   display: flex;
-  gap: 130px;
+  gap: 120px;
   justify-content: center;
   margin-top: 10px;
   color: white;
 }
 
 
-.children:hover{
+.categories:hover{
   cursor: pointer;
   background-color: #3e8e41;
 }
 
-.children:active{
+.categories:active{
   background-color: #3e8e41;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
