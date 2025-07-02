@@ -1,6 +1,7 @@
 body{
   background-color: #476088;
   overflow: hidden;
+  font-family: 'Courier New', Courier, monospace;
 }
 /* .h1Sett{
   display: flex;
@@ -8,98 +9,49 @@ body{
   align-items: center;
 } */
 
+.container{
+  display: flex;
+  justify-content: center;
+  width: 600px;
+  gap: 20px;
+}
+
+.children{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 200px;
+  height: 200px;
+  background-color: #1ca081;
+  border-radius: 5px;
+  margin-top: 20px;
+  border: none;
+}
 
 h1{
   text-align: center;
-  margin-top: 100px;
-  color: white;
-  font-size: 66px;
-  font-family: 'Courier New', Courier, monospace;
+  margin-top: 200px;
+  color:white;
 }
 
-.category{
+.name{
   display: flex;
-  justify-content: space-around;
-  width: 100vw;
-  margin-top: 160px;
-}
-
-#movies{
-  background-color: #1ca081;
-  width: 300px;
-  height:500px;
-  border-radius: 20px;
-  display: flex;
+  gap: 130px;
   justify-content: center;
-  align-items: center;
+  margin-top: 10px;
+  color: white;
 }
 
-#movies:hover{
+
+.children:hover{
   cursor: pointer;
   background-color: #3e8e41;
 }
 
-#movies:active{
+.children:active{
   background-color: #3e8e41;
+  box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
 
-#movieLogo{
-  width: 150px;
-  height: 150px;
-  color: white;
-}
-
-#history{
-  background-color: #1ca081;
-  width: 300px;
-  height:500px;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-#history:hover{
-  cursor: pointer;
-  background-color: #3e8e41;
-}
-
-#history:active{
-  background-color: #3e8e41;
-  transform: translateY(4px);
-}
-
-#historyLogo{
-  width: 150px;
-  height: 200px;
-  color: white;
-}
-
-#games{
- background-color: #1ca081;
-  width: 300px;
-  height:500px;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 20px;
-}
-
-#games:active{
-  background-color: #3e8e41;
-  transform: translateY(4px);
-}
-
-#games:hover{
-  cursor: pointer;
-  background-color: #3e8e41;
-}
-
-#gamesLogo{
-  width: 150px;
-  height: 200px;
-  color: white;
-}

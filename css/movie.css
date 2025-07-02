@@ -1,12 +1,88 @@
+
 body{
   background-color: #476088;
   overflow: hidden;
+  margin: 0;
+}
+
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 h1{
-  text-align: center;
-  color: white;
-  font-size: 50px;
-  margin-top: 400px;
+  color:white;
+  font-size: 25px;
 }
 
+main{
+  color: white;
+  display: flex;
+  flex-direction: column;    
+  justify-content: center;                    
+ 
+}
+
+.answers{
+  border: none;
+  background-color: #1ca081;
+  width: 250px;
+  margin: 20px;
+  color: white;
+  border-radius: 4px;
+  font-family:'Times New Roman', Times, serif;
+  box-shadow: 1px 2px 2px #064e3d;
+  padding: 10px;
+}
+
+.answers:hover{
+  cursor: pointer;
+  background-color: #3e8e41;
+}
+
+.answers:active{
+  background-color: #09496c;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+#settingDiv{
+  display: flex;
+  justify-content: right;
+  margin-right: 40px;
+  margin-top: 20px;
+}
+
+#settingBtn{
+  width:35px;
+  height: 35px;
+  border-radius: 20%;
+  border: none;
+  background-color: #1ca081;
+}
+
+#settingLogo{
+  color: white;
+  width: 20px;
+}
+
+#settingBtn:hover{
+  cursor: pointer;
+  background-color: #3e8e41;
+}
+
+#settingBtn:active{
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+a{
+  text-decoration: none;
+  color: white;
+}
