@@ -76,7 +76,7 @@ function handleNext() {
 };
 
 function updateScore(){
-  scoreP.textContent = `Score is ${score}`;
+  scoreP.textContent = `Score is: ${score}`;
 }
 
 /*----------- Event Listeners ----------*/
