@@ -28,8 +28,9 @@ const questions = [
 ];
 
 /*---------- Variables (state) ---------*/
-let currentQuestionIndex = 0;
-let score = 0;
+ let currentQuestionIndex = 0;
+ let score = 0;
+ let hasAnswerd = false;
 
 /*----- Cached Element References  -----*/
 const questionH1 = document.querySelector("header h1");
@@ -48,19 +49,23 @@ function render(){
   answer2.textContent = current.options[1];
   answer3.textContent = current.options[2];
   answer4.textContent = current.options[3];
+  hasAnswerd = false;
 
 };
 
 function checkValue(event){
+  if(hasAnswerd) return;
+  
   let selectedAnswer = event.target.textContent;
   let correctAnswer = questions[currentQuestionIndex].correct;
 
   if(selectedAnswer === correctAnswer){
     score +=1;
-  }
+  };
 
+  hasAnswerd = true;
   updateScore();
-  render();
+ 
 };
 
 function handleNext(){
