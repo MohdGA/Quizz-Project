@@ -1,4 +1,3 @@
-
 /*-------------- Constants -------------*/
 const questions = [
   {
@@ -29,9 +28,9 @@ const questions = [
 ];
 
 
-
+/*----- Variables  -----*/
 let currentQuestionIndex = 0;
-
+ let score = 0;
 
 /*----- Cached Element References  -----*/
 const questionH1 = document.querySelector("header h1");
@@ -41,6 +40,7 @@ const answer3 = document.querySelector("#answer3");
 const answer4 = document.querySelector("#answer4");
 const correctP = document.querySelector(".correct");
 const nextBtn = document.querySelector("#next");
+const scoreP = document.querySelector('.score');
 
 /*-------------- Functions -------------*/
 
@@ -57,28 +57,34 @@ function render() {
 function checkValue(event) {
   const selectedAnswer = event.target.textContent;
   const correctAnswer = questions[currentQuestionIndex].correct;
-  let score = 0;
-
+ 
   if (selectedAnswer === correctAnswer) {
     correctP.textContent = "Correct Answer!";
-    score += 1;
+    score ++;
 
-  }else if(!selectedAnswer){
-    correctP.textContent = "User didnt choose an answer";
-    score -= score;
-  }
-   else {
+  }else {
     correctP.textContent = "Wrong Answer!";
-    score -= score;
+    score --;
   }
-}
+  updateScore();
+};
+
+
 
 function handleNext() {
   currentQuestionIndex++;
+  console.log(score)
   if (currentQuestionIndex >= questions.length) {
-    
+    currentQuestionIndex = 0;
+    score = 0;
+    updateScore();
   }
   render();
+}
+
+
+function updateScore(){
+  scoreP.textContent = `Score is ${score}`;
 }
 
 /*----------- Event Listeners ----------*/

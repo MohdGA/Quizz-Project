@@ -2,7 +2,7 @@
 
 
 /*---------- Variables (state) ---------*/
-
+let isPlaying = false;
 
 /*----- Cached Element References  -----*/
 const settingBtn = document.querySelector('#settingBtn');
@@ -13,11 +13,16 @@ const audio = new Audio("/music/music.mp3");
 
 /*-------------- Functions -------------*/
 
-function handleMusic(event){
-  if(event.target.id){
+function handleMusic(){
+  if(isPlaying){
+    audio.pause();
+    isPlaying = false;
+  }else{
     audio.play();
+    isPlaying = true;
   }
-}
+  
+};
 
 /*----------- Event Listeners ----------*/
 settingDiv.addEventListener('click', handleMusic)

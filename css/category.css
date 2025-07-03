@@ -4,10 +4,46 @@ body{
   overflow: hidden;
 }
 
+#settingDiv{
+  display: flex;
+  justify-content: right;
+  margin-right: 40px;
+  margin-top: 20px;
+}
+
+#settingBtn{
+  width:35px;
+  height: 35px;
+  border-radius: 20%;
+  border: none;
+  background-color: #1ca081;
+}
+
+#settingLogo{
+  color: white;
+  width: 20px;
+}
+
+#settingBtn:hover{
+  cursor: pointer;
+  background-color: #3e8e41;
+}
+
+#settingBtn:active{
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+
+
 .container{
   display: flex;
   justify-content: center;
-  width: 600px;
+}
+
+.place{
+  display: flex;
   gap: 20px;
 }
 
@@ -17,9 +53,10 @@ body{
   align-items: center;
   color: white;
   width: 150px;
-  height: 250px;
+  height: 200px;
+  font-size: 50px;
   background-color: #1ca081;
-  border-radius: 5px;
+  border-radius: 10%;
   margin-top: 20px;
   border: none;
 }
@@ -27,14 +64,13 @@ body{
 
 h1{
   text-align: center;
-  margin-top: 100px;
+  margin-top: 120px;
   color:white;
 }
 
 .name{
   display: flex;
   justify-content: center;
-  margin-top: 10px;
   color: white;
 }
 
@@ -47,12 +83,14 @@ a{
 
 .categories:hover{
   cursor: pointer;
-  background-color: #3e8e41;
+  background-color: #12048a;
 }
 
 .categories:active{
-  background-color: #3e8e41;
+  background-color: #e5f900;
   box-shadow: 0 5px #666;
+  color:black;
   transform: translateY(4px);
 }
+
 
