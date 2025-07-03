@@ -86,10 +86,6 @@ h1{
   width: 20px;
 }
 
-#settingBtn:hover{
-  cursor: pointer;
-  background-color: #3e8e41;
-}
 
 #settingBtn:active{
   background-color: #3e8e41;
@@ -127,16 +123,12 @@ a{
   transform: translateY(4px);
 }
 
-.correct{
+.score{
   margin-top: 20px;
   color: white;
 }
 
-.rightColor:active{
-  background-color: rgb(255, 255, 255);
-  color: black;
-}
-
-.wrongColor:active{
-  background-color: rgb(255, 1, 1);
+/* .score:active{} */
+.disabled{
+  pointer-events: none;
 }

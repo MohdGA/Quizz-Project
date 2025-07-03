@@ -27,10 +27,9 @@ const questions = [
   }
 ];
 
-
-/*----- Variables  -----*/
+/*---------- Variables (state) ---------*/
 let currentQuestionIndex = 0;
- let score = 0;
+let score = 0;
 
 /*----- Cached Element References  -----*/
 const questionH1 = document.querySelector("header h1");
@@ -38,49 +37,43 @@ const answer1 = document.querySelector("#answer1");
 const answer2 = document.querySelector("#answer2");
 const answer3 = document.querySelector("#answer3");
 const answer4 = document.querySelector("#answer4");
-const correctP = document.querySelector(".correct");
+const scoreP = document.querySelector(".score");
 const nextBtn = document.querySelector("#next");
-const scoreP = document.querySelector('.score');
 
 /*-------------- Functions -------------*/
-
-function render() {
+function render(){
   const current = questions[currentQuestionIndex];
   questionH1.textContent = current.question;
   answer1.textContent = current.options[0];
   answer2.textContent = current.options[1];
   answer3.textContent = current.options[2];
   answer4.textContent = current.options[3];
-  correctP.textContent = "";
-}
 
-function checkValue(event) {
-  const selectedAnswer = event.target.textContent;
-  const correctAnswer = questions[currentQuestionIndex].correct;
- 
-  if (selectedAnswer === correctAnswer) {
-    score += 1;
-
-  }else {
-    score -= 1;
-  }
-  updateScore();
 };
 
+function checkValue(event){
+  let selectedAnswer = event.target.textContent;
+  let correctAnswer = questions[currentQuestionIndex].correct;
 
+  if(selectedAnswer === correctAnswer){
+    score +=1;
+  }
 
-function handleNext() {
+  updateScore();
+  render();
+};
+
+function handleNext(){
   currentQuestionIndex++;
-  console.log(score)
-  if (currentQuestionIndex >= questions.length) {
+  if(currentQuestionIndex >= questions.length){
     currentQuestionIndex = 0;
     score = 0;
-    
   }
   updateScore();
   render();
-}
+};
 
+console.log(currentQuestionIndex)
 
 function updateScore(){
   scoreP.textContent = `Score is: ${score}`;

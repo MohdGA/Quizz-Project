@@ -1,5 +1,9 @@
 body{
   background-color:#476088;
+  /* background: url("/images/theme.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 800px; */
 }
 
 
@@ -10,19 +14,19 @@ body{
 }
 
 img{
-  width: 200px;
+  width: 400px;
 }
 
 #startBtn{
-  width: 50px;
-  height: 20px;
+  width: 120px;
+  height: 40px;
   font-family: 'Courier New', Courier, monospace;
-  font-size: 10px;
-  background-color: #1ca081;
-  color: white;
+  font-size: 15px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
   font-weight: bold;
   border-radius: 10px;
-  box-shadow: 1px 2px 2px #1ca081;
+  box-shadow: 1px 2px 2px #caebe3;
   border: none;
 }
 
@@ -33,14 +37,10 @@ img{
   margin-top: 10px;
 }
 
-#startBtn:hover{
-  cursor: pointer;
-  background-color: #3e8e41;
-}
 
 #startBtn:active{
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
+  background-color: #b3ff00;
+  color: black;
   transform: translateY(4px);
 }
 
@@ -56,26 +56,27 @@ img{
   height: 35px;
   border-radius: 20%;
   border: none;
-  background-color: #1ca081;
+  background-color: #ffffff;
 }
 
 #settingLogo{
-  color: white;
+  color: rgb(0, 0, 0);
   width: 20px;
 }
 
-#settingBtn:hover{
-  cursor: pointer;
-  background-color: #3e8e41;
+
+#settingLogo:active{
+  color: black;
+  box-shadow: 1px 2px 2px #95240475;
 }
 
+
 #settingBtn:active{
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
+  background-color: #9dff00;
   transform: translateY(4px);
 }
 
 a{
   text-decoration: none;
-  color: white;
+  /* color: white; */
 }
