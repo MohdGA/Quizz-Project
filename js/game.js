@@ -4,7 +4,7 @@ const questions = [
   {
     question: "1.What is the name of the main character in The Legend of Zelda series?",
     options: ["Zelda", "Link", "Ganondorf", "Epona"],
-    correct: "Link"
+    correct: "Zelda"
   },
   {
     question: "2.Which company created the PlayStation console?",
@@ -38,7 +38,7 @@ const answer1 = document.querySelector("#answer1");
 const answer2 = document.querySelector("#answer2");
 const answer3 = document.querySelector("#answer3");
 const answer4 = document.querySelector("#answer4");
-const correctP = document.querySelector(".correct");
+const scoreP = document.querySelector(".score");
 const nextBtn = document.querySelector("#next");
 
 /*-------------- Functions -------------*/
@@ -58,19 +58,25 @@ function checkValue(event) {
   const correctAnswer = questions[currentQuestionIndex].correct;
 
   if (selectedAnswer === correctAnswer) {
-    correctP.textContent = "Correct Answer!";
     score += 1;
   }else {
-    correctP.textContent = "Wrong Answer!";
+    score -= 1;
   }
+  updateScore();
 }
 
 function handleNext() {
   currentQuestionIndex++;
   if (currentQuestionIndex >= questions.length) {
     currentQuestionIndex = 0;
-  }
+    score = 0;
+  };
+  updateScore();
   render();
+};
+
+function updateScore(){
+  scoreP.textContent = `Score is ${score}`;
 }
 
 /*----------- Event Listeners ----------*/

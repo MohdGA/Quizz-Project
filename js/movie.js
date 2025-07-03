@@ -31,7 +31,6 @@ const questions = [
 /*---------- Variables (state) ---------*/
 let currentQuestionIndex = 0;
 let score = 0;
-let timer;
 
 /*----- Cached Element References  -----*/
 const questionH1 = document.querySelector("header h1");
@@ -39,7 +38,7 @@ const answer1 = document.querySelector("#answer1");
 const answer2 = document.querySelector("#answer2");
 const answer3 = document.querySelector("#answer3");
 const answer4 = document.querySelector("#answer4");
-const correctP = document.querySelector(".correct");
+const scoreP = document.querySelector(".score");
 const nextBtn = document.querySelector("#next");
 
 /*-------------- Functions -------------*/
@@ -52,7 +51,6 @@ function render() {
   answer3.textContent = current.options[2];
   answer4.textContent = current.options[3];
   correctP.textContent = "";
-  timer = set
 }
 
 function checkValue(event) {
@@ -60,19 +58,25 @@ function checkValue(event) {
   const correctAnswer = questions[currentQuestionIndex].correct;
 
   if (selectedAnswer === correctAnswer) {
-    event.target.classList.toggle("rightColor");
     score += 1;
   } else {
-    event.target.classList.toggle("wrongColor");
+    score -= 1;
   }
+  updateScore();
 }
 
 function handleNext() {
   currentQuestionIndex++;
   if (currentQuestionIndex >= questions.length) {
-    //  nextBtn.innerHTML = "<a href='/html/landing.html'><";
+    currentQuestionIndex = 0;
+    score = 0;
   }
+  updateScore();
   render();
+}
+
+function updateScore(){
+  scoreP.textContent = `Score is ${score}`;
 }
 
 /*----------- Event Listeners ----------*/

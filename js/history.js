@@ -59,12 +59,10 @@ function checkValue(event) {
   const correctAnswer = questions[currentQuestionIndex].correct;
  
   if (selectedAnswer === correctAnswer) {
-    correctP.textContent = "Correct Answer!";
-    score ++;
+    score += 1;
 
   }else {
-    correctP.textContent = "Wrong Answer!";
-    score --;
+    score -= 1;
   }
   updateScore();
 };
@@ -77,8 +75,9 @@ function handleNext() {
   if (currentQuestionIndex >= questions.length) {
     currentQuestionIndex = 0;
     score = 0;
-    updateScore();
+    
   }
+  updateScore();
   render();
 }
 

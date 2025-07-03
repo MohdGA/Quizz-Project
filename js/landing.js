@@ -2,7 +2,7 @@
 
 
 /*---------- Variables (state) ---------*/
-let isPlaying = false;
+let isPlaying = true;
 
 /*----- Cached Element References  -----*/
 const settingBtn = document.querySelector('#settingBtn');
@@ -15,10 +15,10 @@ const audio = new Audio("/music/music.mp3");
 
 function handleMusic(){
   if(isPlaying){
-    audio.pause();
+    audio.play();
     isPlaying = false;
   }else{
-    audio.play();
+    audio.pause();
     isPlaying = true;
   }
   
