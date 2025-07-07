@@ -1,6 +1,6 @@
 # Quiz Game
 
-![Game Screenshot](/images/landing.png)
+![Game Screenshot](landing.png)
 
 ## 🕹️ Description
 
