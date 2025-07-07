@@ -1,4 +1,4 @@
-# ✊✋✌️ Rock, Paper, Scissors
+# Quiz Game
 
 ![Game Screenshot](/images/landing.png)
 
