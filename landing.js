@@ -7,7 +7,7 @@ let isPlaying = true;
 /*----- Cached Element References  -----*/
 const settingBtn = document.querySelector('#settingBtn');
 const settingDiv = document.querySelector("#settingDiv");
-const audio = new Audio("/music/music.mp3");
+const audio = new Audio("music.mp3");
 
 
 
