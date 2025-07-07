@@ -25,5 +25,5 @@ function handleMusic(){
 };
 
 /*----------- Event Listeners ----------*/
-settingDiv.addEventListener('click', handleMusic)
+settingBtn.addEventListener('click', handleMusic)
 

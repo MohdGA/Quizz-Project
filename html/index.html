@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+
+  <script defer src="/js/landing.js"></script>
+  <link rel="stylesheet" href="/css/landing.css">
+</head>
+<body>
+
+
+  <div id="settingDiv">
+    <button id="settingBtn">
+      <i id="settingLogo" class="bi bi-music-note-beamed">
+      </i>
+    </button>
+  </div>
+
+  <div id="logo">
+    <img src="/images/logo.png" alt="Quiz Game">
+  </div>
+
+ <div id="Btn">
+    <a href="/html/categories.html" target="_blank" rel="noopener noreferrer"><button id="startBtn">Start </button></a>
+  </div>
+
+  <div id="instructionsDiv">
+   <button type="button" id="instructions" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  How to play
+</button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">How to play</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p><strong>1. Click on Start Button</strong><br>
+        <p><strong>2. Choose the category:</strong><br>
+                  Each category have 5 questions</p>
+        <p><strong>3. Each question has 4 selection:</strong><br>
+        <p><strong>4. The result will be in up left of the page </strong><br>  
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+
+</body>
+</html>

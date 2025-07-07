@@ -27,6 +27,12 @@ const questions = [
   }
   
 ];
+
+/*---------- Variables (state) ---------*/
+ let currentQuestionIndex = 0;
+ let score = 0;
+ let hasAnswerd = false;
+
 /*----- Cached Element References  -----*/
 const questionH1 = document.querySelector("header h1");
 const answer1 = document.querySelector("#answer1");

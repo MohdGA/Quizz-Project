@@ -80,3 +80,30 @@ a{
   text-decoration: none;
   /* color: white; */
 }
+
+#instructionsDiv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+
+#instructions{
+  width: 120px;
+  height: 40px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 1px 2px 2px #caebe3;
+  border: none;
+}
+
+#instructions:active{
+  background-color: #b3ff00;
+  color: black;
+  transform: translateY(4px);
+}
