@@ -10,7 +10,7 @@ If you answered the 5 question right you win.
 
 ## 🚀 Getting Started
 
-👉 **Play it here:** [https://your-deployment-link.com](https://mohdga.github.io/Quizz-Project/)
+👉 **Play it here:** [https://mohdga.github.io/Quizz-Project/]
 
 👉 **Planning Materials:**
 - [User Stories](/planning/user-stories.md)
