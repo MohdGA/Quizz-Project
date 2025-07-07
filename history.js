@@ -78,8 +78,6 @@ function handleNext(){
   render();
 };
 
-console.log(currentQuestionIndex)
-
 function updateScore(){
   scoreP.textContent = `Score is: ${score}`;
 }

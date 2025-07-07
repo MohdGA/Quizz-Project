@@ -32,7 +32,6 @@ const questions = [
  let currentQuestionIndex = 0;
  let score = 0;
  let hasAnswerd = false;
-//  let hasCorrect = true;
 
 /*----- Cached Element References  -----*/
 const questionH1 = document.querySelector("header h1");
@@ -52,7 +51,6 @@ function render(){
   answer3.textContent = current.options[2];
   answer4.textContent = current.options[3];
   hasAnswerd = false;
-  // hasCorrect = false;
 };
 
 function checkValue(event){
@@ -65,13 +63,6 @@ function checkValue(event){
     score +=1;
   };
 
-  // if(hasCorrect){
-  //   if(selectedAnswer === correctAnswer){
-  //     event.target.style.backgroundColor = 'yellow';
-  //   };
-  // };
-
-  // hasCorrect = false;
   hasAnswerd = true;
   updateScore();
  
@@ -87,7 +78,6 @@ function handleNext(){
   render();
 };
 
-// console.log(currentQuestionIndex)
 
 function updateScore(){
   scoreP.textContent = `Score is: ${score}`;
